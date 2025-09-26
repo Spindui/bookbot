@@ -1,4 +1,4 @@
-def get_num_of_words(file_contents: str):
+def get_word_count(file_contents: str):
     words = file_contents.split()
     num_words = len(words)
     return num_words
@@ -8,12 +8,12 @@ def get_book_text(filepath):
         file_contents = f.read()
     return file_contents
 
-def print_num_of_frankenstein():
-    file_contents = get_book_text('books/frankenstein.txt')
-    num_words = get_num_of_words(file_contents)       
+def print_word_count(filepath):
+    file_contents = get_book_text(filepath)
+    num_words = get_word_count(file_contents)       
     print(f"Found {num_words} total words")
 
-def num_of_individual_char(file_contents: str):
+def get_char_counts(file_contents: str):
     file_contents = file_contents.lower()
     num_of_char_dict = {}
     for char in file_contents:
