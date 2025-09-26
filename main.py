@@ -1,10 +1,4 @@
-def get_book_text(filepath):
-    with open(filepath) as f:
-        file_contents = f.read()
-    return file_contents
-
-def main():
-    print(f"{get_book_text("books/frankenstein.txt")}")
+from stats import *
 
 if __name__ == "__main__":
-    main()
+    print_num_of_frankenstein()
